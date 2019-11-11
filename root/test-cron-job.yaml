@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Template
 metadata:
-  name: "bender"
+  name: "test-cron-job"
   annotations:
     iconClass: "icon-spring"
     description: Openshift template for spring-boot application/service deploying
@@ -17,14 +17,14 @@ objects:
       concurrencyPolicy: Forbid
       failedJobsHistoryLimit: "10"
       schedule: "*/5 * * * *"
-      startingDeadlineSeconds: 600
-      successfulJobsHistoryLimit: 3
+      startingDeadlineSeconds: "600"
+      successfulJobsHistoryLimit: "3"
       suspend: false
       jobTemplate:
         spec:
           template:
             metadata:
-              name: bender-10m
+              name: "curl-job"
             spec:
               containers:
                 - image: appropriate/curl
