@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: simple-curl-pod
+spec:
+  containers:
+  - name: curl
+    image: appropriate/curl
+    command: ["/bin/sh"]
+    args:
+      - -c
+      - while :; do echo 'Hit CTRL+C'; sleep 30; done
