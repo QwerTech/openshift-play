@@ -1,0 +1,9 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: service-in-od-integration-api-precommit
+spec:
+  type: ExternalName
+  externalName: swagger-integration.od-integration-api-precommit.svc.cluster.local
+  ports:
+    - port: 8080
