@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: telnet
+spec:
+  containers:
+  - name: telnet
+    image: mikesplain/telnet
+    args:
+      - cadence-frontend.epam-aws-ift1.svc.cluster.local
+      - "7933"
