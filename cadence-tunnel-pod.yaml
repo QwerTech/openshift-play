@@ -1,0 +1,14 @@
+#oc apply -f cadence-tunnel-pod.yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: cadence-tunnel
+spec:
+  containers:
+  - name: cadence-tunnel
+    image: alpine/socat
+    args:
+      - "-d"
+      - "-d"
+      - "tcp-listen:7933,fork,reuseaddr"
+      - "tcp-connect:cadence-frontend:7933"
