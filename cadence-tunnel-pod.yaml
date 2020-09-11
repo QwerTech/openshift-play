@@ -1,4 +1,4 @@
-#oc apply -f cadence-tunnel-pod.yaml
+#To apply this file execute: oc apply -f cadence-tunnel-pod.yaml
 apiVersion: v1
 kind: Pod
 metadata:
