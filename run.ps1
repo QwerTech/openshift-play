@@ -4,3 +4,4 @@ oc process -f .\test-cron-job.yaml | oc apply -f -
 oc process -f .\test-config-map.yaml --param-file=test-config-map-params | oc apply -f -
 
 oc apply -f telnet-pod.yaml
+oc apply -f dnsutils-pod.yaml
